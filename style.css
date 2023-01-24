@@ -7,6 +7,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -48,12 +52,17 @@ form button {
   cursor: pointer;
 }
 
+.recipe-container {
+  position: relative;
+}
+
 .recipe-container-inner {
   width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 
 .card {
@@ -93,4 +102,38 @@ form button {
   background-color: white;
   color: #dd535b;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #dd535b;
+  color: white;
+}
+
+.modal-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.modal-container .modal {
+  max-width: 800px;
+  width: 100%;
+  height: 500px;
+}
+
+.close-modal {
+  font-size: 30px;
+  position: relative;
+  top: -270px;
+  left: 800px;
+  cursor: pointer;
+}
+
+.blur {
+  filter: blur(3px);
 }
